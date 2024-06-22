@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.calc {
+  display: flex;
+  flex-wrap: wrap;
+  width: 340px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #161616;
+  box-shadow: 1px 1px 9px 10px #ffffff40, 1px 2px 9px 10px #2b09ed40,
+    1px 2px 9px 10px #ed090940;
+}
+.calc-screen {
+  width: 100%;
+  overflow: hidden;
+  font-size: 30px;
+  text-align: right;
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  padding: 10px;
+}
+.calc-keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 5px;
+  row-gap: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.calc-keys button {
+  width: 70px;
+  height: 60px;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000040;
+  border: none;
+  background-color: #050505;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.calc-keys button:active {
+  background-color: #343131;
+  border: 1px solid white;
+}
+.operator {
+  background-color: #11202d !important;
+}
+.all-clear {
+  background-color: #bf2727 !important;
+}
+.clear-entry {
+  background-color: #d0751a !important;
+}
+buttom:active {
+  background-color: #465745;
+}
+.operator:active,
+.all-clear:active,
+.clear-entry:active {
+  background-color: #050505 !important;
+}
