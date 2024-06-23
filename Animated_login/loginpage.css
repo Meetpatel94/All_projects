@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+}
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.box {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #1701db 0%,
+    #db0101 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #db0101 0%,
+    #db01c5 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear -1.5s infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: 20px solid #222;
+  background: #303030;
+}
+form {
+  position: relative;
+  z-index: 1000;
+}
+form h2 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.inputbox {
+  position: relative;
+  margin-bottom: 40px;
+  width: 240px;
+}
+.inputbox span {
+  position: absolute;
+  inset: -2px;
+  z-index: 1;
+}
+.inputbox span::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #db0101 0%,
+    #af01db 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear infinite;
+  box-shadow: 0 0 0 2px #000;
+}
+.inputbox:nth-child(2) span::before {
+  animation-delay: -1.5s;
+}
+.inputbox span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #292929;
+}
+.inputbox input {
+  position: relative;
+  z-index: 1000000;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+.inputbox input::placeholder {
+  color: #fff;
+  opacity: 0.5s;
+}
+.inputbox input[type="submit"] {
+  background: #01dbc2;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px #01dbc2;
+  width: 100%;
+  font-weight: 500;
+  color: #292929;
+  filter: drop-shadow(0 0 15px #01dbc2);
+}
+.inputbox input[type="submit"]:focus {
+  filter: drop-shadow(0 0 15px #0117db);
+  letter-spacing: 6px;
+  border-radius: 5px;
+}
+.grp {
+  position: relative;
+  padding-bottom: 60px;
+  top: -10px;
+  display: flex;
+  justify-content: space-between;
+}
+.grp a {
+  text-decoration: none;
+  color: #fff8;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.75rem;
+}
+.grp a:hover {
+  filter: drop-shadow(0 0 5px #01dbc2);
+  color: #01dbc2;
+}
+.grp a:hover {
+  filter: drop-shadow(0 0 5px #01dbc2);
+  color: #01dbc2;
+}
